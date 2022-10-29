@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dog House Ödeme Sayfası</title>
+    <link rel="stylesheet" href="dist/main.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarExample01"
+            aria-controls="navbarExample01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarExample01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" aria-current="page" href="index.html">Anasayfa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="dog-breeds.html">Köpeklerin Özellikleri ve Cinsleri</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="dog-wishes.html">Köpeğiniz Ne İstiyor?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop-page.html">Mağaza</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Hakkımızda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">İletişim</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+    
+      <!-- Background image -->
+      <div
+        class="p-5 text-center bg-image"
+        style="
+          background-image: url('public/images/dog.jpg');
+          height: 400px;
+          margin-top: 58px;
+          background-size: 100% 100%;
+        "
+      >
+        <div class="mask" style="background-color: rgba(146, 140, 140, 0.6);">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+              <h1 class="mb-3"></h1>
+              <h4 class="mb-3">Dog House</h4>
+              <a class="btn btn-outline-light btn-lg" href="register.html" role="button"
+              >Kaydol</a
+              >
+              <a class="btn btn-outline-light btn-lg" href="login.html" role="button"
+              >Giriş Yap</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Background image -->
+    </header>
+
+    
+    <div class="col-md-7 col-lg-8 mx-auto pt-5 bg-light">
+        <h2 class="text-center pb-5 text-secondary">Ödeme Sayfası</h2>
+        <h4 class="mb-3">Fatura Adresi</h4>
+        <form class="needs-validation">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">İsim</label>
+              <input type="text" class="form-control" id="firstName" required="">
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Soyad</label>
+              <input type="text" class="form-control" id="lastName" required="">
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">E-posta</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Adres</label>
+              <input type="text" class="form-control" id="address" required="">
+            </div>
+
+            <div class="col-md-5">
+              <label for="city" class="form-label">Şehir</label>
+              <select class="form-select" id="city" required="">
+                <option value="">Şehir seçiniz</option>
+                <option>İstanbul</option>
+                <option>Ankara</option>
+                <option>İzmir</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <label for="county" class="form-label">İlçe</label>
+              <select class="form-select" id="county" required="">
+                <option value="">İlçe seçiniz</option>
+                <option>Arnavutköy</option>
+                <option>Bakırköy</option>
+                <option>Esenler</option>
+                <option>Fatih</option>
+                <option>Çankaya</option>
+                <option>Etimesgut</option>
+                <option>Keçiören</option>
+                <option>Yenimahalle</option>
+                <option>Bornova</option>
+                <option>Karşıyaka</option>
+                <option>Narlıdere</option>
+                <option>Menemen</option>
+              </select>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address">
+            <label class="form-check-label" for="same-address">Fatura adresim teslimat adresimle aynı</label>
+          </div>
+
+
+          <hr class="my-4">
+
+          <h4 class="mb-3">Ödeme</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+              <label class="form-check-label" for="credit">Kredi Kartı</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="debit">Banka Kartı</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="paypal">PayPal</label>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Kart üzerindeki isim</label>
+              <input type="text" class="form-control" id="cc-name" required="">
+            </div>
+
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label">Kart numarası</label>
+              <input type="text" class="form-control" id="cc-number" required="">
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label">Son kullanma tarihi</label>
+              <input type="text" class="form-control" id="cc-expiration" required="">
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" required="">
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center">
+          <a class="w-25 btn btn-primary btn-lg mt-5" href="success.html" role="button"
+          >Ödemeyi tamamla</a>
+          </div>
+          </div>
+        </form>
+      </div>
+
+    <div class="container my-5 mw-100">
+
+      <footer class="text-center text-white" style="background-color: #caced1;">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!-- Section: Images -->
+          <section class="">
+            <div class="row">
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                     class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                     data-ripple-color="light"
+                     >
+                  <img
+                       src="public/images/golden.jpg"
+                       class="w-100"
+                       />
+                  <a href="#!">
+                    <div
+                         class="mask"
+                         style="background-color: rgba(251, 251, 251, 0.2);"
+                         ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                     class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                     data-ripple-color="light"
+                     >
+                  <img
+                       src="public/images/boxer.jpg"
+                       class="w-100"
+                       />
+                  <a href="#!">
+                    <div
+                         class="mask"
+                         style="background-color: rgba(251, 251, 251, 0.2);"
+                         ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                     class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                     data-ripple-color="light"
+                     >
+                  <img
+                       src="public/images/beagle.jpg"
+                       class="w-100"
+                       />
+                  <a href="#!">
+                    <div
+                         class="mask"
+                         style="background-color: rgba(251, 251, 251, 0.2);"
+                         ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                     class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                     data-ripple-color="light"
+                     >
+                  <img
+                       src="public/images/chowchow.jpg"
+                       class="w-100"
+                       />
+                  <a href="#!">
+                    <div
+                         class="mask"
+                         style="background-color: rgba(251, 251, 251, 0.2);"
+                         ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                     class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                     data-ripple-color="light"
+                     >
+                  <img
+                       src="public/images/poodle.jpg"
+                       class="w-100"
+                       />
+                  <a href="#!">
+                    <div
+                         class="mask"
+                         style="background-color: rgba(251, 251, 251, 0.2);"
+                         ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                     class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                     data-ripple-color="light"
+                     >
+                  <img
+                       src="public/images/husky.jpg"
+                       class="w-100"
+                       />
+                  <a href="#!">
+                    <div
+                         class="mask"
+                         style="background-color: rgba(251, 251, 251, 0.2);"
+                         ></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Images -->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+          <a class="text-white" href="index.html">DogHouse.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    
+    </div>
+    <!-- End of .container -->
+
+ 
+  </main>
+  <script src="dist/main.js"></script>
+</body>
+</html>
